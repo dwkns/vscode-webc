@@ -13,7 +13,7 @@
     "email": "dwkns@me.com",
     "url": "https://dwkns.com"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.73.0"
   },
@@ -33,7 +33,9 @@
       {
         "path": "./syntaxes/webc.injection.json",
         "scopeName": "webc.injection",
-        "injectTo": ["text.html.derivative"]
+        "injectTo": [
+          "text.html.derivative"
+        ]
       }
     ]
   }
