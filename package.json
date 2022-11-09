@@ -17,6 +17,9 @@
   "engines": {
     "vscode": "^1.73.0"
   },
+  "scripts": {
+    "pub": "npm version patch && vsce package && vsce publish"
+  },
   "icon": "images/logo.webp",
   "contributes": {
     "themes": [
