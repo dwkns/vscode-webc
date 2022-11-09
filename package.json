@@ -1,7 +1,10 @@
 {
   "name": "webc",
   "displayName": "webc",
-  "description": "Add webc support to VSCode",
+  "description": "VSCode Extension for WebC files",
+  "repository": {
+    "url": "https://github.com/dwkns/vscode-webc.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.73.0"
