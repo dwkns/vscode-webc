@@ -1,0 +1,27 @@
+{
+	"scopeName": "webc.injection",
+	"foldingStartMarker": "({%\\s*(block|filter|for|if|macro|raw|switch))",
+	"foldingStopMarker": "({%\\s*(endblock|endfilter|endfor|endif|endmacro|endraw|endswitch)\\s*%})",
+	"injectionSelector": "L:*",
+	"patterns": [
+		{
+			"include": "#frontMatter"
+		},
+		{
+			"match": "TODO",
+			"name": "bum"
+		}
+	],
+	"repository": {
+		"frontMatter": {
+			"begin": "\\A-{3}\\s*$",
+			"contentName": "meta.embedded.block.frontmatter",
+			"patterns": [
+				{
+					"include": "source.yaml"
+				}
+			],
+			"end": "(^|\\G)-{3}|\\.{3}\\s*$"
+		}
+	}
+}

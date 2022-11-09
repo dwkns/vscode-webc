@@ -1,0 +1,25 @@
+{
+  "name": "webc",
+  "displayName": "webc",
+  "description": "Add webc support to VSCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "uiTheme": "vs-dark",
+        "label": "webc-dark",
+        "path": "./themes/webc-dark.json"
+      }
+    ],
+    "grammars": [
+      {
+        "path": "./syntaxes/webc.injection.json",
+        "scopeName": "webc.injection",
+        "injectTo": ["text.html.derivative"]
+      }
+    ]
+  }
+}
