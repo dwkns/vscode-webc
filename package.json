@@ -2,7 +2,7 @@
   "name": "webc",
   "displayName": "webc",
   "description": "VSCode Extension for WebC files",
-  "homepage": "https://github.com/dwkns/vscode-web/",
+  "homepage": "https://github.com/dwkns/vscode-webc/",
   "repository": {
     "url": "https://github.com/dwkns/vscode-webc.git"
   },
