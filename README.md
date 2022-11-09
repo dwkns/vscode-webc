@@ -9,9 +9,8 @@ Works by extending the built-in HTML syntax highlighting.
 [WebC](https://github.com/11ty/webc)  is a compiler for Single File Web Components. 
 
 ## Features
-
 - Detects YAML front matter for syntax highlighting. 
-- HTML, CSS and JS syntax highlighting.
+- HTML, CSS and JS detection, syntax highlighting, formatting and IntelliSense
 - Opinionated Theme (webc-dark)
 
 ## Usage
