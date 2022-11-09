@@ -2,13 +2,22 @@
   "name": "webc",
   "displayName": "webc",
   "description": "VSCode Extension for WebC files",
+  "homepage": "https://github.com/dwkns/vscode-web/",
   "repository": {
     "url": "https://github.com/dwkns/vscode-webc.git"
+  },
+  "publisher": "dwkns",
+  "license": "MIT",
+  "author": {
+    "name": "dwkns",
+    "email": "dwkns@me.com",
+    "url": "https://dwkns.com"
   },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.73.0"
   },
+  "icon": "images/logo.webp",
   "contributes": {
     "themes": [
       {
