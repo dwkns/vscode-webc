@@ -1,0 +1,139 @@
+{
+  "Block - njk": {
+    "prefix": "block",
+    "body": [
+      "{%- block ${1:name} -%}\n\t$2\n{%- endblock -%}"
+    ],
+    "description": "block defines a section on the template and identifies it with a name. This is used by template inheritance. Base templates can specify blocks and child templates can override them with new content."
+  },
+  "Show - njk": {
+    "prefix": "njk",
+    "body": "{%- $1 -%}",
+    "description": "A nunjucks template block."
+  },
+  "Show Variable - njk": {
+    "prefix": "show",
+    "body": "{{ ${1:variable} }}",
+    "description": "A variable looks up a value from the template context."
+  },
+  "Extends - njk": {
+    "prefix": "extends",
+    "body": "{%- extends \"${1:template}\" -%}$2",
+    "description": "extends is used to specify template inheritance. The specified template is used as a base template."
+  },
+  "Include - njk": {
+    "prefix": "include",
+    "body": "{%- include \"${1:template}\" -%}$2",
+    "description": "Include pulls in other templates in place.It\"s useful when you need to share smaller chunks across several templates that already inherit other templates."
+  },
+  "For - njk": {
+    "prefix": "for",
+    "body": "{%- for ${1:item} in ${2:sequence} -%}\n\t$3\n{%- endfor -%}",
+    "description": "for iterates over arrays and dictionaries."
+  },
+  "switch - njk": {
+    "prefix": "switch",
+    "body": "{% switch ${1:foo} %}\n\t{% case '${2:bar}' %}\n\n\t{% case '${3:baz}' %}\n\n\t{% default %}\n\t\n{% endswitch %}",
+    "description": "Switch statement."
+  },
+  "asyncEach - njk": {
+    "prefix": "asyncEach",
+    "body": "{%- asyncEach ${1:item} in ${2:sequence} -%}\n\t$3\n{%- endeach -%}",
+    "description": "asyncEach is an asynchronous version of for. You only need this if you are using a custom template loader that is asynchronous; otherwise you will never need it. Async filters and extensions also need this, but internally loops are automatically converted into asyncEach if any async filters and extensions are used within the loop."
+  },
+  "asyncAll - njk": {
+    "prefix": "asyncAll",
+    "body": "{%- asyncAll ${1:item} in ${2:sequence} -%}\n\t$3\n{%- endeach -%}",
+    "description": "asyncAll is similar to asyncEach, except it renders all the items in parallel, preserving the order of the items. This is only helpful if you are using asynchronous filters, extensions, or loaders. Otherwise you should never use this."
+  },
+  "If — njk - njk": {
+    "prefix": "if",
+    "body": "{%- if ${1:condition} -%}\n\t$2\n{%- endif -%}",
+    "description": "if tests a condition and lets you selectively display content. It behaves exactly as javascript\"s if behaves."
+  },
+  "If Else - njk": {
+    "prefix": "ife",
+    "body": "{%- if ${1:condition} -%}\n\t$2\n{%- else -%}\n\t$3\n{%- endif -%}",
+    "description": "It creates the if else block."
+  },
+  "If Elif - njk": {
+    "prefix": "ifel",
+    "body": "{%- if ${1:condition} -%}\n\t$2\n{%- elif ${3:condition} -%}\n\t$4\n{%- else -%}\n\t$5\n{%- endif -%}",
+    "description": "Alternate condition with the if block"
+  },
+  "Elif - njk": {
+    "prefix": "elif",
+    "body": "{%- elif ${1:condition} -%}\n\t$2",
+    "description": "Alternate condition in the if block"
+  },
+  "Else - njk": {
+    "prefix": "else",
+    "body": "{%- else -%}\n\t$2",
+    "description": "Alternate condition in the if block"
+  },
+  "Set - njk": {
+    "prefix": "set",
+    "body": "{%- set ${1:var} = ${2:value} -%}$3",
+    "description": "set lets you create/modify a variable."
+  },
+  "Macro - njk": {
+    "prefix": "macro",
+    "body": "{%- macro ${1:name}(${2:args}) -%}\n\t$3\n{%- endmacro -%}",
+    "description": "macro allows you to define reusable chunks of content. It is similar to a function in a programming language. "
+  },
+  "End Macro - njk": {
+    "prefix": "end macro",
+    "body": "{%- endmacro -%}",
+    "description": "macro closing tag "
+  },
+  "End If - njk": {
+    "prefix": "end if",
+    "body": "{%- endif -%}",
+    "description": "endif closing tag "
+  },
+  "Import - njk": {
+    "prefix": "import",
+    "body": "{%- import \"${1:template}\" as ${2:var} with context -%}$3",
+    "description": "import loads a different template and allows you to access its exported values. Macros and top-level assignments (done with set) are exported from templates, allowing you to access them in a different template."
+  },
+  "From Import - njk": {
+    "prefix": "from",
+    "body": "{%- from \"${1:template}\" import ${2:macro} as ${3:var} -%}$4",
+    "description": "It imports specific values from a template into the current namespace."
+  },
+  "Raw - njk": {
+    "prefix": "raw",
+    "body": "{%- raw -%}\n\t$1\n{%- endraw -%}",
+    "description": "If you want to output any of the special nunjucks tags like {{, you can use raw and anything inside of it will be output as plain text."
+  },
+  "Call - njk": {
+    "prefix": "call",
+    "body": "{%- call ${1:macro} -%}\n\t$2\n{%- endcall -%}",
+    "description": "A call block enables you to call a macro with all the text inside the tag. This is helpful if you want to pass a lot of content into a macro. The content is available inside the macro as caller()."
+  },
+  "Alt Variable - njk": {
+    "prefix": "var",
+    "body": "{{ ${1:var} }}",
+    "description": "A variable looks up a value from the template context. If you wanted to simply display a variable, you would do: {{ username }}"
+  },
+  "Super - njk": {
+    "prefix": "super",
+    "body": "{{ super() }}",
+    "description": "You can render the contents of the parent block inside a child block by calling super."
+  },
+  "Or - njk": {
+    "prefix": "or",
+    "body": "or",
+    "description": "Logical or operator."
+  },
+  "filter - njk": {
+    "prefix": "filter",
+    "body": "| ${1:filter}",
+    "description": "You can pass filters from the variable directly e.g. {{ foo | escape }}klasdjflkjsadflk"
+  },
+  "console log - njk": {
+    "prefix": "con",
+    "body": "{% console $1, '${1:title}' %}",
+    "description": "Log things to your console plugin"
+  }
+}

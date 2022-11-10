@@ -32,7 +32,7 @@
     "grammars": [
       {
         "path": "./syntaxes/webc.injection.json",
-        "scopeName": "webc.injection",
+        "scopeName": "source.webc",
         "injectTo": [
           "text.html.derivative"
         ]

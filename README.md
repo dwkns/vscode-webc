@@ -4,6 +4,8 @@ Syntax Highlighting for `.webc` files.
 
 Works by extending the built-in HTML syntax highlighting.
 
+Doesn't support much right now. Suggestions and comments welcome on the Repo.
+
 ## About WebC
 
 [WebC](https://github.com/11ty/webc)  is a compiler for Single File Web Components. 
@@ -19,28 +21,26 @@ Map `.webc` files to HTML by editing your preferences.
 
 ```json
 "files.associations": {
-  ...
-  "*.webc": "html"
+  "*.webc": "html",
+  "*.njk": "html"
 }
 ```
 
 ## Known Issues
 
-Doesn't support much right now. Suggestions and comments welcome on the Repo.
+- Formatting is iffy. You get better (but not perfect) results if you use [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+
+
 
 ### To do
 
 - [ ] Detect WebC attributes
-- [ ] Add some snippets
-- [ ] Add Nunjucks support
+- [ ] Add some WebC snippets
+- [x] Add Nunjucks support
 - [ ] Create a basic language server
 - [ ] So many other things
 
 
-
-## Release Notes
-
-### 0.0.1 
-
-Initial release
-
+## Credits
+- [Zach Leatherman](https://twitter.com/zachleat) For Creating [Eleventy](https://www.11ty.dev) and [WebC](https://github.com/11ty/webc)
+- [Nunjucks VSCode extension](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks) for inspiration
