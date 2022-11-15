@@ -38,7 +38,8 @@ Map `.webc` files to HTML by editing your preferences. You might want to associa
 - WebC attributes and properties are wildcards right now. We should probably detect valid/invalid values (maybe when WebC gets to 1.0?) 
 - WebC attributes, properties and dynamic attributes are detected everywhere. Should restrcit this to within html tags: `<` and `>`
 - Strings after properties or attributes are marked as `invalid.illegal.character-not-allowed-here` needs to detect these properly.
-- Comments are HTML comments. Think these may be better as Nunjucks comments.
+- Comments are HTML comments. These may be better as Nunjucks comments? Or can we make Nunjucks support HTML comments?
+- Comments don't work properly in YAML frontmatter.
 
 ### To do
 
