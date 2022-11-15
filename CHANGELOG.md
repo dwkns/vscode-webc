@@ -1,14 +1,23 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. 
+## [**0.0.6**] - 2022-11-15
+### Added
+- Added WebC Properties, attributes & dynamic attribute highlighting.
+
+### Improved
+- Frontmatter syntax highlighting.
+- Nunjucks highlighting.
+
+### Updated
+- Readme
+
 ## [**0.0.5**] - 2022-11-11
 ### Added
-
 - Workspace colors to theme.
 
 ## [**0.0.4**] - 2022-11-10
 ### Added
-
 - YAML, JS & JSON frontmatter syntax highlighting
 - Nunjucks syntax highlighting
 - Nunjucks Snippets

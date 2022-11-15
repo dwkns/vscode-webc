@@ -53,8 +53,23 @@
         "foreground": "#ff00f7"
       }
     },
+    {
+      "name": "property.webc",
+      "scope": "property.webc",
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#ffdd00"
+      }
+    },
+    {
+      "name": "dynamic-attribute.webc",
+      "scope": "dynamic-attribute.webc",
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#00ff33"
+      }
+    },
 
-    
     // JS
     {
       "name": "js/ts entity.name.function.js",
@@ -245,7 +260,7 @@
     // frontmatter
     {
       "name": "Frontmatter | start/end ",
-      "scope": "meta.embedded.block.frontmatter.njk punctuation.definition.tag.end.njk, meta.embedded.block.frontmatter.njk punctuation.definition.tag.begin.njk",
+      "scope": "meta.embedded.block.frontmatter punctuation.definition.tag.end.frontmatter, meta.embedded.block.frontmatter punctuation.definition.tag.begin.frontmatter",
       "settings": {
         "foreground": "#F06060",
         "fontStyle": "bold"
@@ -422,7 +437,8 @@
       "name": "CSS | punctuation.definition.constant.css",
       "scope": [
         "punctuation.definition.constant.css",
-        "constant.other.color.rgb-value.hex.css"
+        "constant.other.color.rgb-value.hex.css",
+        "support.constant.color.w3c-standard-color-name.css"
       ],
       "settings": {
         "foreground": "#C678DD",

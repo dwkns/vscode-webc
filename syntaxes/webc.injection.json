@@ -3,7 +3,7 @@
   "name": "WebC syntax highlighing",
   "comment": "WebC syntax highlighing support for Visual Studio Code",
   "scopeName": "source.webc",
-  "injectionSelector": "L:text.html -meta.embedded -comment, source.yaml",
+  "injectionSelector": "L:text.html.derivative -comment, source.yaml -comment",
   "fileTypes": ["njk", "webc", "html", "md", "yaml"],
   "foldingStartMarker": "^{%-?\\s*(if|for|asyncEach|asyncAll|macro|set|block|filter|raw|call)[^(%})]+-?%}",
   "foldingStopMarker": "^{%-?\\s*(endif|endfor|endeach|endall|endmacro|endset|endblock|endfilter|endraw|endcall)[^(%})]+-?%}",
@@ -21,48 +21,63 @@
     {
       "name": "attribute.webc",
       "match": "webc:(\\w+)"
+    },
+    {
+      "name": "property.webc",
+      "match": "@(\\w+)"
+    },
+    {
+      "name": "dynamic-attribute.webc",
+      "match": ":(\\w+)"
     }
   ],
   "repository": {
-    "front-matter-yaml": {
+
+    "front-matter-yaml":     {
       "contentName": "source.yaml",
-      "name": "meta.embedded.block.frontmatter.njk",
-      "begin": "^---*(?=\\s*\\n)",
+      "name": "meta.embedded.block.frontmatter",
+      "begin": "(\\As*---s*\n)",
       "beginCaptures": {
-        "0": { "name": "punctuation.definition.tag.begin.njk" }
+        "0": { "name": "punctuation.definition.tag.begin.frontmatter" }
       },
-      "end": "---(?=\\s*\\n)",
+      "end": "(^s*---s*\n)",
       "endCaptures": {
-        "0": { "name": "punctuation.definition.tag.end.njk" }
+        "0": { "name": "punctuation.definition.tag.end.frontmatter" }
       },
-      "patterns": [{ "include": "#template-tags" }, { "include": "source.yaml" }]
+      "patterns": [
+        { "include": "#template-tags" },
+        { "include": "source.yaml" }
+      ]
     },
     "front-matter-js": {
       "contentName": "source.js",
-      "name": "meta.embedded.block.frontmatter.njk",
-      "begin": "^---js*(?=\\s*\\n)",
+      "name": "meta.embedded.block.frontmatter",
+      "begin": "(\\As*---jss*\n)",
+
       "beginCaptures": {
-        "0": { "name": "punctuation.definition.tag.begin.njk" }
+        "0": { "name": "punctuation.definition.tag.begin.frontmatter" }
       },
-      "end": "---(?=\\s*\\n)",
+      "end": "(^s*---s*\n)",
       "endCaptures": {
-        "0": { "name": "punctuation.definition.tag.end.njk" }
+        "0": { "name": "punctuation.definition.tag.end.frontmatter" }
       },
       "patterns": [{ "include": "source.js" }]
     },
     "front-matter-json": {
       "contentName": "source.json",
-      "name": "meta.embedded.block.frontmatter.njk",
-      "begin": "^---json*(?=\\s*\\n)",
+      "name": "meta.embedded.block.frontmatter",
+      "begin": "(\\As*---jsons*\n)",
       "beginCaptures": {
-        "0": { "name": "punctuation.definition.tag.begin.njk" }
+        "0": { "name": "punctuation.definition.tag.begin.frontmatter" }
       },
-      "end": "---(?=\\s*\\n)",
+      "end": "(^s*---s*\n)",
       "endCaptures": {
-        "0": { "name": "punctuation.definition.tag.end.njk" }
+        "0": { "name": "punctuation.definition.tag.end.frontmatter" }
       },
-      "patterns": [ { "include": "source.json" } ]
+      "patterns": [{ "include": "source.json" }]
     },
+
+    
     "template-tags": {
       "name": "punctuation.tag.njk",
       "begin": "({%)(-)?",
