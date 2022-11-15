@@ -18,7 +18,8 @@
     "vscode": "^1.73.0"
   },
   "scripts": {
-    "pub": "npm version patch && vsce package && vsce publish"
+    "pub": "npm version patch && vsce package && vsce publish",
+    "clean": "npx rimraf *.vsix yarn-error.log"
   },
   "icon": "images/logo.webp",
   "contributes": {
@@ -34,7 +35,7 @@
         "path": "./syntaxes/webc.injection.json",
         "scopeName": "source.webc",
         "injectTo": [
-          "text.html.derivative"
+          "text.html", "source.js"
         ]
       }
     ]

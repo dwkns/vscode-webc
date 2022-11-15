@@ -3,7 +3,7 @@
   "name": "WebC syntax highlighing",
   "comment": "WebC syntax highlighing support for Visual Studio Code",
   "scopeName": "source.webc",
-  "injectionSelector": "L:text.html -meta.embedded -comment , text.html.markdown -comment, source.yaml",
+  "injectionSelector": "L:text.html -meta.embedded -comment, source.yaml",
   "fileTypes": ["njk", "webc", "html", "md", "yaml"],
   "foldingStartMarker": "^{%-?\\s*(if|for|asyncEach|asyncAll|macro|set|block|filter|raw|call)[^(%})]+-?%}",
   "foldingStopMarker": "^{%-?\\s*(endif|endfor|endeach|endall|endmacro|endset|endblock|endfilter|endraw|endcall)[^(%})]+-?%}",
@@ -17,6 +17,10 @@
     {
       "name": "todo",
       "match": "(todo|TODO)"
+    },
+    {
+      "name": "attribute.webc",
+      "match": "webc:(\\w+)"
     }
   ],
   "repository": {
