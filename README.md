@@ -40,6 +40,7 @@ Map `.webc` files to HTML by editing your preferences. You might want to associa
 - Strings after properties or attributes are marked as `invalid.illegal.character-not-allowed-here` needs to detect these properly.
 - Comments are HTML comments. These may be better as Nunjucks comments? Or can we make Nunjucks support HTML comments?
 - Comments don't work properly in YAML frontmatter.
+- Formatting may not be working properly in front-matter
 
 ### To do
 

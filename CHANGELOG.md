@@ -1,6 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file. 
+## [**0.0.7**] - 2022-11-25
+### Improved
+- Fix snippets showing up in HTML files
+  
 ## [**0.0.6**] - 2022-11-15
 ### Added
 - Added WebC Properties, attributes & dynamic attribute highlighting.

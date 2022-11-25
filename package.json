@@ -39,6 +39,12 @@
           "source.js"
         ]
       }
+    ],
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/njk-snippets.json"
+      }
     ]
   }
 }
