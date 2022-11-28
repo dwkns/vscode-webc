@@ -28,7 +28,7 @@
     },
     {
       "name": "dynamic-attribute.webc",
-      "match": ":(\\w+)"
+      "match": "(\\s+):(\\w+)"
     }
   ],
   "repository": {
