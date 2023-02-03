@@ -42,7 +42,7 @@
       "name": "js/ts string",
       "scope": "string.js, string.quoted.single.js, string.quoted.double.js",
       "settings": {
-        "foreground": "#98C379"
+        "foreground": "#6A9955"
       }
     },
     {
@@ -84,7 +84,7 @@
       "name": "string",
       "scope": "string",
       "settings": {
-        "foreground": "#98C379"
+        "foreground": "#6A9955"
       }
     },
 
@@ -144,7 +144,7 @@
       "name": "entity.name.function",
       "scope": "entity.name.function",
       "settings": {
-        "foreground": "#98C379"
+        "foreground": "#6A9955"
       }
     },
     {
