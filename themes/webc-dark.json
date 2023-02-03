@@ -291,6 +291,13 @@
       }
     },
     {
+      "name": "HTML Tags begin/end",
+      "scope": "text.html.derivative punctuation.definition.tag.begin, text.html.derivative punctuation.definition.tag.end",
+      "settings": {
+        "foreground": "#635D55"
+      }
+    },
+    {
       "name": "Attributes",
       "scope": [
         "entity.other.attribute-name.html",
