@@ -1,0 +1,44 @@
+---json
+{
+	"key": "value {{ var }} webc:something",
+	"anotherKey:" : {
+		"key1": "some value",
+		"key2": "other value"
+	}
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>WebC Example</title>
+	<style webc:nokeep :something="sasdd" @ppo="asdasd" attr="some attribute {{ someNunjucksVar }}" {{ someNunjucksVar }}>
+		/* body {
+color: red;
+color: {{ someNunjucksVar }};
+} */
+		body {
+			color: red;
+		}
+	</style>
+	<script webc:nokeep :something="sasdd" @ppo="asdasd" attr="some attribute {{ someNunjucksVar }}" {{ someNunjucksVar }}>
+		console.log("Hello {{ someNunjucksVar }} World!");
+		for (let index = 0; index < array.length; index++) {
+			const element = array[index];
+			console.log("Hello {{ someNunjucksVar }} World!");
+		}
+	</script>
+</head>
+
+<body>
+	<!-- WebC *is* HTML. webc:nokeep -->
+	<!-- WebC *is* HTML. {{ someNunjucksVar }} -->
+	<p webc:nokeep :something="sasdd" @ppo="asdasd" attr="some attribute {{ someNunjucksVar }}" {{ someNunjucksVar }}>
+		{{ someNunjucksVar }}
+		WebC *is* HTML.
+	</p>
+</body>
+
+</html>

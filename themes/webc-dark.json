@@ -173,7 +173,7 @@
     {
       "name": "comment",
       "scope": "comment",
-      "settings": { "foreground": "#717272", "fontStyle": "italic" }
+      "settings": { "foreground": "#635D55", "fontStyle": "italic" }
     },
     {
       "name": "constant.numeric",
